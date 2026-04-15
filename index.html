@@ -1,146 +1,309 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yavuz Halimergün | Publications</title>
-  <meta name="description" content="Academic publications of Yavuz Halimergün">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yavuz Halimergün | Academic Publications</title>
+  <meta name="description" content="Academic publications, conference papers, and research outputs of Yavuz Halimergün in transport planning, GIS, public transport integration, walkability, and sustainable urban mobility.">
+  <meta name="keywords" content="Yavuz Halimergün, transport planning, GIS, public transport, tram, bus integration, walkability, sustainable mobility, Sakarya">
+  <meta name="author" content="Yavuz Halimergün">
+
   <style>
+    :root {
+      --text: #1d1d1f;
+      --muted: #5f6368;
+      --line: #e4e6eb;
+      --card: #ffffff;
+      --bg: #f7f8fa;
+      --link: #0b57d0;
+      --accent: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px auto;
-      max-width: 900px;
-      line-height: 1.6;
-      color: #222;
-      padding: 0 20px;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
-    h1, h2, h3 {
-      color: #111;
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
     }
-    .paper {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 18px;
-      margin-bottom: 20px;
-      background: #fafafa;
+
+    .hero {
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
     }
-    .meta {
-      color: #555;
-      margin-bottom: 10px;
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      gap: 24px;
+      align-items: center;
     }
-    a {
-      color: #0b57d0;
+
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 36px;
+      line-height: 1.2;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .intro {
+      max-width: 760px;
+      color: #374151;
+      margin-bottom: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-block;
       text-decoration: none;
+      color: var(--link);
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
     }
-    a:hover {
+
+    .btn:hover {
       text-decoration: underline;
     }
-    .top {
-      margin-bottom: 30px;
+
+    .section {
+      margin-top: 26px;
+    }
+
+    .section h2 {
+      font-size: 26px;
+      margin: 0 0 14px 0;
+      color: var(--accent);
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .paper {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .paper-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .authors {
+      color: #374151;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .journal {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .abstract-label {
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .abstract {
+      font-size: 15px;
+      color: #24303f;
+      text-align: justify;
+      margin-bottom: 14px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: var(--link);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 780px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .paper-title {
+        font-size: 19px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <div class="top">
-    <h1>Yavuz Halimergün</h1>
-    <p>Civil Engineer (MSc.) | Transport Planning Specialist | GIS-Based Tranportation Studies</p>
-    <p>This page lists selected academic publications and downloadable full-text files where available.</p>
-  </div>
+    <div class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Yavuz Halimergün</h1>
+          <div class="subtitle">Civil Engineer • Transport Planning • GIS-Based Public Transport Research</div>
 
-  <h2>Publications</h2>
+          <div class="intro">
+            This page presents selected academic publications, conference papers, and research outputs by Yavuz Halimergün. The studies mainly focus on transport planning, GIS-based spatial analysis, public transport integration, walkability, sustainable urban mobility, and transport system evaluation.
+          </div>
 
-  <div class="paper">
-    <h3>Will new tram lines enhance the connectivity and walkability? A case study of Sakarya</h3>
-    <div class="meta">
-      Yavuz Halimergün, Abdulkadir Özden, Süleyman Nurullah Adahi Şahin, Hakan Kocaman — 2024
+          <div class="buttons">
+            <a class="btn" href="https://www.linkedin.com/in/yavuzcomtr/" target="_blank">LinkedIn</a>
+            <a class="btn" href="https://scholar.google.com/citations?user=d_5O0dAAAAAJ&hl=tr&authuser=1" target="_blank">Google Scholar</a>
+            <a class="btn" href="researchgate.net/profile/Yavuz-Halimerguen?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZURpcmVjdG9yeSIsInBvc2l0aW9uIjoiZ2xvYmFsSGVhZGVyIn19" target="_blank">ResearchGate</a>
+            <a class="btn" href="https://orcid.org/my-orcid?orcid=0000-0001-7363-4029" target="_blank">ORCID</a>
+          </div>
+    
     </div>
-    <p>
-      Published in Sustainable Social Development, 2(5), Article ID 2886.
-    </p>
-    <p>
-      DOI:
-      <a href="https://doi.org/10.54517/ssd.v2i5.2886" target="_blank">
-        10.54517/ssd.v2i5.2886
-      </a>
-    </p>
-    <p>
-      PDF:
-      <a href="papers/Will new tram lines enhance the connectivity and walkability A case study of Sakarya.pdf" target="_blank">
-        Open PDF
-      </a>
-    </p>
-  </div>
 
-  <div class="paper">
-    <h3>Are public transport information systems equally effective? Insights from local and migrant passengers</h3>
-    <div class="meta">
-      Abdulkadir Özden, Hakan Kocaman, Yavuz Halimergün — 2025
+    <div class="section">
+      <h2>Selected Publications</h2>
+      <div class="section-intro">
+        A curated list of journal articles, conference papers, and research contributions related to public transport systems, GIS-based mobility analysis, and sustainable transport planning.
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Will new tram lines enhance the connectivity and walkability? A case study of Sakarya</div>
+        <div class="authors">Yavuz Halimergün, Abdulkadir Özden, Süleyman Nurullah Adahi Şahin, Hakan Kocaman</div>
+        <div class="journal">Sustainable Social Development, 2024, 2(5), Article ID 2886.</div>
+        <div class="abstract">
+          <span class="abstract-label">Abstract:</span>
+          This study evaluates the potential effects of newly proposed tram lines on urban connectivity and accessibility in Sakarya. Using a GIS-based analytical framework, the paper investigates how rail system investments may improve public transport integration and strengthen sustainable urban mobility.
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.54517/ssd.v2i5.2886" target="_blank">DOI</a>
+          <a href="papers/Will new tram lines enhance the connectivity and walkability A case study of Sakarya.pdf" target="_blank">PDF</a>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Are public transport information systems equally effective? Insights from local and migrant passengers</div>
+        <div class="authors">Abdulkadir Özden, Hakan Kocaman, Yavuz Halimergün</div>
+        <div class="journal">4th International Civil Engineering and Architecture Conference (ICEARC), Trabzon, Türkiye, 2025, pp. 2614–2621.</div>
+        <div class="abstract">
+          <span class="abstract-label">Abstract:</span>
+          This paper examines whether public transport information systems generate similar levels of benefit for local and migrant passengers. The study discusses differences in access, interpretation, and usability of travel information and highlights implications for equitable public transport planning.
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.31462/icearc2025_ce_tra_987" target="_blank">DOI</a>
+          <a href="papers/Are public transport information systems equally effective Insights from local and migrant passengers.pdf" target="_blank">PDF</a>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Walking Towards Sustainability: Optimizing Public Transit through the Walkable Cities by Time-Oriented Model</div>
+        <div class="authors">Süleyman Nurullah Adahi Şahin, Yavuz Halimergün, Abdulkadir Özden</div>
+        <div class="journal">60th ISOCARP World Planning Congress, Siena, Italy, 2024.</div>
+        <div class="abstract">
+          <span class="abstract-label">Abstract:</span>
+          This study discusses the relationship between walkability and public transport efficiency through a time-oriented urban accessibility perspective. The paper emphasizes that strengthening pedestrian access to transit systems can improve both public transport use and sustainable urban form.
+        </div>
+        <div class="links">
+          <a href="papers/Walking Towards Sustainability Optimizing Public Transit though the Walkable Cities by Time-Oriented Model.pdf" target="_blank">PDF</a>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Mikro Ölçekli Ulaşım Planlaması İçin Derin Öğrenme ile Bina Tespiti: CBS ve AUS Uygulamaları</div>
+        <div class="authors">Hakan Kocaman, Abdulkadir Özden, Süleyman Nurullah Adahi Şahin, Cem Özkurt, Abdurrahman Korkmaz, Yavuz Halimergün</div>
+        <div class="journal">1. Ulusal Akıllı Ulaşım Sistemleri Konferansı (Conf-ITS’25), Ankara, Türkiye, 2025, pp. 231–242.</div>
+        <div class="abstract">
+          <span class="abstract-label">Abstract:</span>
+          This paper explores the use of deep learning-based building detection for micro-scale transport planning. By integrating GIS and intelligent transportation systems applications, the study demonstrates how detailed spatial data can support more precise and responsive planning processes.
+        </div>
+        <div class="links">
+          <a href="papers/Mikro Ölçekli Ulaşım Planlaması İçin Derin Öğrenme ile Bina Tespiti CBS ve AUS Uygulamaları.pdf" target="_blank">PDF</a>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Deprem Riskine Karşı Raylı Sistem Altyapılarının CBS ile Analizi: Türkiye Örneği</div>
+        <div class="authors">Hakan Kocaman, Süleyman Nurullah Adahi Şahin, Yavuz Halimergün, Abdulkadir Özden</div>
+        <div class="journal">7th International Symposium on Natural Hazards and Disaster Management, 2025.</div>
+        <div class="abstract">
+          <span class="abstract-label">Abstract:</span>
+          This study evaluates rail system infrastructures in Türkiye from the perspective of earthquake risk using GIS-based analysis methods. The paper focuses on the spatial vulnerability of critical transport infrastructure and underlines the importance of resilience-oriented transport planning.
+        </div>
+        <div class="links">
+          <a href="papers/Deprem Riskine Karşı Raylı Sistem Altyapılarının CBS ile Analizi Türkiye Örneği.pdf" target="_blank">PDF</a>
+        </div>
+      </div>
     </div>
-    <p>
-      4th International Civil Engineering & Architecture Conference (ICEARC), Trabzon, Türkiye.
-    </p>
-    <p>
-      DOI:
-      <a href="https://doi.org/10.31462/icearc2025_ce_tra_987" target="_blank">
-        10.31462/icearc2025_ce_tra_987
-      </a>
-    </p>
-    <p>
-      PDF:
-      <a href="papers/Are public transport information systems equally effective Insights from local and migrant passengers.pdf" target="_blank">
-        Open PDF
-      </a>
-    </p>
-  </div>
 
-  <div class="paper">
-    <h3>Deprem Riskine Karşı Raylı Sistem Altyapılarının CBS ile Analizi: Türkiye Örneği</h3>
-    <div class="meta">
-      Hakan Kocaman, Adahi Şahin, Yavuz Halimergün, Abdulkadir Özden  — 2025
+    <div class="footer">
+      If any full-text file is unavailable or if you would like to request a copy for academic purposes, please contact the author via LinkedIn or the platforms listed above.
     </div>
-    <p>
-      7th International Symposium on Natural Hazards and Disaster Management, Diyarbakır, Türkiye.
-    </p>
-    <p>
-      PDF:
-      <a href="papers/Deprem Riskine Karşı Raylı Sistem Altyapılarının CBS ile Analizi Türkiye Örneği.pdf" target="_blank">
-        Open PDF
-      </a>
-    </p>
-  </div>
 
-  <div class="paper">
-    <h3>Mikro Ölçekli Ulaşım Planlaması İçin Derin Öğrenme ile Bina Tespiti: CBS ve AUS Uygulamaları</h3>
-    <div class="meta">
-      Hakan Kocaman, Abdulkadir Özden, Süleyman Nurullah Adahi Şahin, Cem Özkurt, Abdurrahman Korkmaz, Yavuz Halimergün  — 2025
-    </div>
-    <p>
-      Conf-ITS’25 1. ULUSAL AKILLI ULAŞIM SİSTEMLERİ KONFERANSI, Ankara, Türkiye.
-    </p>
-    <p>
-      PDF:
-      <a href="papers/Mikro Ölçekli Ulaşım Planlaması İçin Derin Öğrenme ile Bina Tespiti CBS ve AUS Uygulamaları.pdf" target="_blank">
-        Open PDF
-      </a>
-    </p>
   </div>
-
-  <div class="paper">
-    <h3>Walking Towards Sustainability: Optimizing Public Transit though the "Walkable Cities" by Time-Oriented Model</h3>
-    <div class="meta">
-      Süleyman Nurullah Adahi Şahin, Yavuz Halimergün, Abdulkadir Özden  — 2025
-    </div>
-    <p>
-      60th ISOCARP World Planning Congress, Sienna, Italy.
-    </p>
-    <p>
-      PDF:
-      <a href="papers/Walking Towards Sustainability Optimizing Public Transit though the Walkable Cities by Time-Oriented Model.pdf" target="_blank">
-        Open PDF
-      </a>
-    </p>
-  </div>
-
 </body>
 </html>
